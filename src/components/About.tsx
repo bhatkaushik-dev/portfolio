@@ -5,15 +5,27 @@ const ABOUT_FACTS = [
   { icon: "💼", label: "Role", value: "Frontend Engineer" },
   { icon: "🏢", label: "Company", value: "Invenzo Labs" },
   { icon: "📅", label: "Experience", value: "3+ Years" },
-  { icon: "🎓", label: "Degree", value: "B.Tech CS, BIT" },
+  { icon: "🎓", label: "Degree", value: "B.Tech , BIT" },
   { icon: "🌐", label: "Focus", value: "React & Next.js" },
 ];
 
 const HIGHLIGHTS = [
-  { number: "50+", label: "Components Built", color: "var(--accent-purple-light)" },
-  { number: "35%", label: "LCP Improvement", color: "var(--accent-cyan-light)" },
+  {
+    number: "50+",
+    label: "Projects",
+    color: "var(--accent-purple-light)",
+  },
+  {
+    number: "35%",
+    label: "LCP Improvement",
+    color: "var(--accent-cyan-light)",
+  },
   { number: "5K+", label: "Daily Active Users", color: "#f9a8d4" },
-  { number: "80%+", label: "Test Coverage", color: "var(--accent-purple-light)" },
+  {
+    number: "80%+",
+    label: "Test Coverage",
+    color: "var(--accent-purple-light)",
+  },
 ];
 
 export default function About() {
@@ -29,8 +41,7 @@ export default function About() {
         </div>
 
         {/* Two column layout */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
-
+        <div className="about-grid">
           {/* Left — text */}
           <div>
             <div
@@ -51,51 +62,68 @@ export default function About() {
               <span>👋</span> Software Engineer — Frontend
             </div>
 
-            <h3 style={{ fontSize: "1.6rem", fontWeight: 800, marginBottom: "16px", lineHeight: 1.3 }}>
+            <h3
+              style={{
+                fontSize: "1.6rem",
+                fontWeight: 800,
+                marginBottom: "16px",
+                lineHeight: 1.3,
+              }}
+            >
               I build fast, beautiful,{" "}
               <span className="gradient-text-cyan">accessible</span> UIs.
             </h3>
 
-            <p style={{ color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: "16px", fontSize: "0.97rem" }}>
-              I&apos;m a Software Engineer with <strong style={{ color: "var(--text-primary)" }}>3+ years of experience</strong> specializing in{" "}
-              <strong style={{ color: "var(--accent-purple-light)" }}>React</strong> and{" "}
-              <strong style={{ color: "var(--accent-cyan-light)" }}>Next.js</strong>. I have a proven track record of delivering high-scale consumer UIs that serve thousands of users daily.
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                lineHeight: 1.85,
+                marginBottom: "16px",
+                fontSize: "0.97rem",
+              }}
+            >
+              I&apos;m a Software Engineer with{" "}
+              <strong style={{ color: "var(--text-primary)" }}>
+                3+ years of experience
+              </strong>{" "}
+              specializing in{" "}
+              <strong style={{ color: "var(--accent-purple-light)" }}>
+                React
+              </strong>{" "}
+              and{" "}
+              <strong style={{ color: "var(--accent-cyan-light)" }}>
+                Next.js
+              </strong>
+              . I have a proven track record of delivering high-scale consumer
+              UIs that serve thousands of users daily.
             </p>
 
-            <p style={{ color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: "24px", fontSize: "0.97rem" }}>
-              I&apos;m passionate about performance optimization, design systems, and accessibility. I love collaborating with UX and Product teams to turn complex requirements into elegant, maintainable frontend architectures.
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                lineHeight: 1.85,
+                marginBottom: "24px",
+                fontSize: "0.97rem",
+              }}
+            >
+              I&apos;m passionate about performance optimization, design
+              systems, and accessibility. I love collaborating with UX and
+              Product teams to turn complex requirements into elegant,
+              maintainable frontend architectures.
             </p>
 
-            <p style={{ color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: "32px", fontSize: "0.97rem" }}>
-              Outside of work, I&apos;m constantly exploring new tech — whether it&apos;s experimenting with animation libraries, contributing to side projects, or diving into the latest frontend patterns.
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                lineHeight: 1.85,
+                marginBottom: "32px",
+                fontSize: "0.97rem",
+              }}
+            >
+              Outside of work, I&apos;m constantly exploring new tech — whether
+              it&apos;s experimenting with animation libraries, contributing to
+              side projects, or diving into the latest frontend patterns.
             </p>
-
-            {/* Social links */}
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a
-                href="https://www.linkedin.com/in/kaushik-bhat-3368b1195/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-                style={{ textDecoration: "none", fontSize: "0.88rem", padding: "10px 20px" }}
-              >
-                <span>💼</span> LinkedIn
-              </a>
-              <a
-                href="mailto:kaushikgb99@gmail.com"
-                className="btn-secondary"
-                style={{ textDecoration: "none", fontSize: "0.88rem", padding: "10px 20px" }}
-              >
-                <span>📧</span> Email Me
-              </a>
-              <a
-                href="tel:+919110691605"
-                className="btn-secondary"
-                style={{ textDecoration: "none", fontSize: "0.88rem", padding: "10px 20px" }}
-              >
-                <span>📞</span> Call Me
-              </a>
-            </div>
           </div>
 
           {/* Right — cards */}
@@ -105,10 +133,25 @@ export default function About() {
               className="glass-card"
               style={{ padding: "28px", marginBottom: "20px" }}
             >
-              <h4 style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "18px", fontFamily: "'Fira Code', monospace", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+              <h4
+                style={{
+                  fontSize: "0.85rem",
+                  color: "var(--text-muted)",
+                  marginBottom: "18px",
+                  fontFamily: "'Fira Code', monospace",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                }}
+              >
                 Quick Facts
               </h4>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "14px",
+                }}
+              >
                 {ABOUT_FACTS.map((fact) => (
                   <div
                     key={fact.label}
@@ -124,8 +167,23 @@ export default function About() {
                   >
                     <span style={{ fontSize: "1.1rem" }}>{fact.icon}</span>
                     <div>
-                      <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>{fact.label}</div>
-                      <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text-primary)" }}>{fact.value}</div>
+                      <div
+                        style={{
+                          fontSize: "0.7rem",
+                          color: "var(--text-muted)",
+                        }}
+                      >
+                        {fact.label}
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.85rem",
+                          fontWeight: 600,
+                          color: "var(--text-primary)",
+                        }}
+                      >
+                        {fact.value}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -133,17 +191,36 @@ export default function About() {
             </div>
 
             {/* Highlights */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "14px",
+              }}
+            >
               {HIGHLIGHTS.map((h) => (
                 <div
                   key={h.label}
                   className="stat-card"
                   style={{ padding: "20px" }}
                 >
-                  <div style={{ fontSize: "1.8rem", fontWeight: 900, color: h.color, lineHeight: 1 }}>
+                  <div
+                    style={{
+                      fontSize: "1.8rem",
+                      fontWeight: 900,
+                      color: h.color,
+                      lineHeight: 1,
+                    }}
+                  >
                     {h.number}
                   </div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: "6px" }}>
+                  <div
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "var(--text-muted)",
+                      marginTop: "6px",
+                    }}
+                  >
                     {h.label}
                   </div>
                 </div>
@@ -154,9 +231,21 @@ export default function About() {
       </div>
 
       <style>{`
+        .about-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 48px;
+          align-items: start;
+        }
+        @media (max-width: 968px) {
+          .about-grid {
+            gap: 32px;
+          }
+        }
         @media (max-width: 768px) {
-          #about > div > div:last-child {
+          .about-grid {
             grid-template-columns: 1fr !important;
+            gap: 40px;
           }
         }
       `}</style>

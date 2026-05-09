@@ -54,96 +54,129 @@ export default function Contact() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px", alignItems: "start" }}>
-
-          {/* Left — contact info */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            <div className="glass-card" style={{ padding: "28px", marginBottom: "8px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
-                <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 10px #22c55e", display: "inline-block" }} />
-                <span style={{ fontSize: "0.85rem", color: "#22c55e", fontFamily: "'Fira Code', monospace" }}>
-                  Available for work
-                </span>
-              </div>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "8px" }}>
-                Open to new opportunities
-              </h3>
-              <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.7 }}>
-                Whether it&apos;s a full-time role, freelance project, or contract work — I&apos;m ready to bring my frontend expertise to your team.
-              </p>
-            </div>
-
-            {CONTACT_ITEMS.map((item) => {
-              const c = colorMap[item.color];
-              const content = (
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "20px",
+            justifyContent: "center",
+          }}
+        >
+          {CONTACT_ITEMS.map((item) => {
+            const c = colorMap[item.color];
+            const content = (
+              <div
+                className="glass-card"
+                style={{
+                  padding: "24px",
+                  background: c.bg,
+                  borderColor: c.border,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  gap: "16px",
+                  height: "100%",
+                  cursor: item.href ? "pointer" : "default",
+                }}
+              >
                 <div
-                  className="glass-card"
-                  style={{ padding: "18px 22px", background: c.bg, borderColor: c.border, display: "flex", alignItems: "center", gap: "16px", cursor: item.href ? "pointer" : "default" }}
+                  style={{
+                    width: "56px",
+                    height: "56px",
+                    borderRadius: "16px",
+                    background: c.border,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1.6rem",
+                    flexShrink: 0,
+                  }}
                 >
-                  <div style={{ width: "44px", height: "44px", borderRadius: "12px", background: c.border, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", flexShrink: 0 }}>
-                    {item.icon}
-                  </div>
-                  <div>
-                    <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginBottom: "2px", fontFamily: "'Fira Code', monospace" }}>{item.label}</div>
-                    <div style={{ fontSize: "0.9rem", fontWeight: 600, color: item.href ? c.accent : "var(--text-primary)" }}>{item.value}</div>
-                  </div>
-                  {item.href && <span style={{ marginLeft: "auto", color: c.accent, opacity: 0.6 }}>→</span>}
+                  {item.icon}
                 </div>
-              );
+                <div>
+                  <div
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "var(--text-muted)",
+                      marginBottom: "6px",
+                      fontFamily: "'Fira Code', monospace",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "1rem",
+                      fontWeight: 600,
+                      color: item.href ? c.accent : "var(--text-primary)",
+                      wordBreak: "break-all",
+                    }}
+                  >
+                    {item.value}
+                  </div>
+                </div>
+                {item.href && (
+                  <div style={{ marginTop: "auto", fontSize: "0.8rem", color: c.accent, fontWeight: 500 }}>
+                    Connect →
+                  </div>
+                )}
+              </div>
+            );
 
-              return item.href ? (
-                <a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" style={{ textDecoration: "none", display: "block" }}>
-                  {content}
-                </a>
-              ) : (
-                <div key={item.label}>{content}</div>
-              );
-            })}
-          </div>
-
-          {/* Right — CTA card */}
-          <div className="glass-card" style={{ padding: "40px", textAlign: "center" }}>
-            <div style={{ fontSize: "4rem", marginBottom: "20px" }}>🚀</div>
-            <h3 style={{ fontSize: "1.4rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "12px" }}>
-              Ready to build something{" "}
-              <span className="gradient-text">amazing?</span>
-            </h3>
-            <p style={{ color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.75, marginBottom: "32px" }}>
-              I bring 3+ years of frontend expertise, a passion for clean code, and a commitment to delivering polished, performant user experiences. Let&apos;s create something great together.
-            </p>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            return item.href ? (
               <a
-                href="mailto:kaushikgb99@gmail.com"
-                className="btn-primary"
-                style={{ textDecoration: "none", justifyContent: "center", fontSize: "1rem", padding: "14px 32px" }}
-              >
-                <span>📬</span> Send Me An Email
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kaushik-bhat-3368b1195/"
-                target="_blank"
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="btn-secondary"
-                style={{ textDecoration: "none", justifyContent: "center", fontSize: "1rem", padding: "14px 32px" }}
+                style={{ textDecoration: "none", display: "block" }}
               >
-                <span>💼</span> Connect on LinkedIn
+                {content}
               </a>
-            </div>
+            ) : (
+              <div key={item.label}>{content}</div>
+            );
+          })}
+        </div>
 
-            <div style={{ marginTop: "32px", padding: "16px", borderRadius: "10px", background: "rgba(124,58,237,0.08)", border: "1px solid rgba(124,58,237,0.2)" }}>
-              <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", fontFamily: "'Fira Code', monospace" }}>
-                ⚡ Usually responds within 24 hours
-              </p>
-            </div>
+        {/* Feedback Badge */}
+        <div style={{ marginTop: "64px", textAlign: "center" }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "10px 24px",
+              borderRadius: "999px",
+              background: "rgba(34, 197, 94, 0.1)",
+              border: "1px solid rgba(34, 197, 94, 0.2)",
+              color: "#22c55e",
+              fontSize: "0.85rem",
+              fontFamily: "'Fira Code', monospace",
+            }}
+          >
+            <span
+              style={{
+                width: "8px",
+                height: "8px",
+                borderRadius: "50%",
+                background: "#22c55e",
+                boxShadow: "0 0 10px #22c55e",
+              }}
+            />
+            ⚡ Usually responds within 24 hours
           </div>
         </div>
       </div>
 
       <style>{`
         @media (max-width: 768px) {
-          #contact > div > div:last-child {
-            grid-template-columns: 1fr !important;
+          #contact .glass-card {
+            padding: 20px;
           }
         }
       `}</style>

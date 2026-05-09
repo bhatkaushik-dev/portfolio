@@ -307,6 +307,22 @@ export default function Hero() {
             <span>📬</span>
             <span>Get In Touch</span>
           </a>
+          <a
+            href="https://drive.google.com/file/d/1cvIeDcmFADQSdHjWMrakKVcNANKK7UVQ/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+            style={{
+              textDecoration: "none",
+              fontSize: "1rem",
+              padding: "14px 32px",
+              borderColor: "var(--accent-cyan)",
+              color: "var(--accent-cyan-light)",
+            }}
+          >
+            <span>📄</span>
+            <span>Download Resume</span>
+          </a>
         </div>
 
         {/* Scroll indicator */}

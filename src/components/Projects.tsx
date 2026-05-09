@@ -92,19 +92,14 @@ export default function Projects() {
             return (
               <div
                 key={project.name}
-                className="glass-card"
+                className="glass-card project-grid-card"
                 style={{
-                  padding: "36px",
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "40px",
-                  alignItems: "center",
                   background: c.bg,
                   borderColor: c.border,
                 }}
               >
                 {/* Content side */}
-                <div style={{ order: isEven ? 0 : 1 }}>
+                <div className="project-content" style={{ order: isEven ? 0 : 1 }}>
                   <div
                     style={{
                       display: "flex",
@@ -175,6 +170,7 @@ export default function Projects() {
 
                 {/* Visual / Metric side */}
                 <div
+                  className="project-visual"
                   style={{
                     order: isEven ? 1 : 0,
                     display: "flex",
@@ -227,11 +223,32 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Responsive override */}
+      {/* Responsive styles */}
       <style>{`
+        .project-grid-card {
+          padding: 36px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          alignItems: center;
+        }
+        @media (max-width: 968px) {
+          .project-grid-card {
+            gap: 20px;
+          }
+        }
         @media (max-width: 768px) {
-          .glass-card[style*="grid-template-columns: 1fr 1fr"] {
-            grid-template-columns: 1fr !important;
+          .project-grid-card {
+            grid-template-columns: 1fr;
+            padding: 24px;
+            gap: 32px;
+          }
+          .project-content {
+            order: 0 !important;
+          }
+          .project-visual {
+            order: 1 !important;
+            min-height: 160px !important;
           }
         }
       `}</style>

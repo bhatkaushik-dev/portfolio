@@ -8,21 +8,21 @@ const SKILLS_DATA = [
     skills: [
       { name: "React.js", level: 95 },
       { name: "Next.js (SSR/ISR)", level: 92 },
-      { name: "TypeScript", level: 88 },
-      { name: "JavaScript ES6+", level: 95 },
-      { name: "HTML5 & CSS3", level: 90 },
+      { name: "TypeScript", level: 90 },
+      { name: "Redux Toolkit", level: 88 },
+      { name: "Vite / Webpack", level: 85 },
     ],
   },
   {
-    category: "Data & State",
+    category: "API & Data",
     icon: "⚡",
     color: "cyan",
     skills: [
-      { name: "Redux Toolkit", level: 85 },
-      { name: "React Query", level: 88 },
-      { name: "GraphQL", level: 78 },
       { name: "REST APIs", level: 95 },
-      { name: "Axios", level: 90 },
+      { name: "Axios", level: 92 },
+      { name: "React Query", level: 90 },
+      { name: "Optimistic UI", level: 88 },
+      { name: "WebSockets", level: 82 },
     ],
   },
   {
@@ -30,11 +30,11 @@ const SKILLS_DATA = [
     icon: "🚀",
     color: "pink",
     skills: [
-      { name: "Web Vitals / LCP", level: 88 },
-      { name: "Lighthouse", level: 85 },
-      { name: "Code Splitting", level: 80 },
-      { name: "PWA", level: 75 },
-      { name: "Grafana", level: 70 },
+      { name: "Web Vitals Optimization", level: 90 },
+      { name: "Code Splitting", level: 88 },
+      { name: "SEO / Semantic HTML", level: 85 },
+      { name: "Image Optimization", level: 92 },
+      { name: "PWA", level: 80 },
     ],
   },
   {
@@ -42,11 +42,11 @@ const SKILLS_DATA = [
     icon: "🏗️",
     color: "purple",
     skills: [
-      { name: "Atomic Design", level: 85 },
-      { name: "Modular CSS", level: 90 },
-      { name: "Component Libraries", level: 88 },
-      { name: "Design Patterns", level: 80 },
-      { name: "WCAG Accessibility", level: 78 },
+      { name: "Modular UI Design", level: 90 },
+      { name: "Component Libraries", level: 92 },
+      { name: "Atomic Design", level: 88 },
+      { name: "Enterprise Patterns", level: 85 },
+      { name: "API Integration", level: 95 },
     ],
   },
   {
@@ -54,20 +54,20 @@ const SKILLS_DATA = [
     icon: "🔧",
     color: "cyan",
     skills: [
-      { name: "Jest & RTL", level: 82 },
-      { name: "Webpack & Babel", level: 76 },
-      { name: "CI/CD", level: 75 },
-      { name: "Git", level: 90 },
-      { name: "Node.js", level: 70 },
+      { name: "Antigravity Framework", level: 95 },
+      { name: "CI/CD (GitHub Actions)", level: 82 },
+      { name: "Jest / RTL", level: 85 },
+      { name: "Agile / Scrum", level: 90 },
+      { name: "Git", level: 92 },
     ],
   },
 ];
 
 const TECH_TAGS = [
-  "React.js", "Next.js", "TypeScript", "JavaScript", "GraphQL",
-  "Redux Toolkit", "React Query", "Tailwind CSS", "Node.js",
-  "Jest", "RTL", "Webpack", "Lighthouse", "PWA", "WebSockets",
-  "REST APIs", "Grafana", "CI/CD", "Git", "Figma",
+  "React.js", "Next.js", "TypeScript", "Redux Toolkit", "React Query",
+  "Antigravity", "Web Vitals", "SEO", "PWA", "WebSockets",
+  "Vite", "Webpack", "Jest", "GitHub Actions", "REST APIs",
+  "Axios", "Modular UI", "Atomic Design", "Agile", "Optimistic UI",
 ];
 
 const colorMap: Record<string, { bar: string; label: string; border: string; bg: string }> = {

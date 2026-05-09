@@ -3,31 +3,27 @@
 const BULLETS = [
   {
     icon: "🏗️",
-    text: "Architected and delivered high-responsive UIs for consumer platforms reaching 5,000+ daily active users, ensuring 99.9% uptime and seamless product experiences.",
-  },
-  {
-    icon: "🧩",
-    text: "Built 50+ reusable TypeScript components using a modular CSS approach, standardizing the company's internal Design System and reducing development time by 20%.",
+    text: "Owned the frontend development of high-traffic React and Next.js applications, catering to 5,000+ daily active users with a focus on performance and scalability.",
   },
   {
     icon: "⚡",
-    text: "Resolved critical performance bottlenecks using Chrome DevTools and Lighthouse, leading to a 35% improvement in Largest Contentful Paint (LCP) and First Input Delay (FID).",
+    text: "Optimized application load times by implementing SSR and Hydration strategies in Next.js, resulting in a 35% improvement in Page Load Speed.",
   },
   {
-    icon: "🤝",
-    text: "Collaborated with UX and Product Owners to translate complex business requirements into supportable technical solutions, adhering to WCAG accessibility standards.",
+    icon: "🚀",
+    text: "Leveraged the Antigravity framework to architect scalable web modules, ensuring strict adherence to enterprise design patterns and standardized state management.",
+  },
+  {
+    icon: "🧩",
+    text: "Established coding standards and a centralized Design System with 50+ reusable components, accelerating feature delivery cycles by 20% across the team.",
   },
   {
     icon: "🔗",
-    text: "Integrated RESTful and GraphQL services with React Query, implementing Optimistic UI updates to provide a low-latency experience for real-time data.",
+    text: "Developed a robust API abstraction layer using React Query, standardizing data fetching and implementing Optimistic UI updates for a smoother user experience.",
   },
   {
-    icon: "🧪",
-    text: "Ensured code quality by maintaining 80%+ unit test coverage using Jest and React Testing Library, reducing production bugs by 15%.",
-  },
-  {
-    icon: "📊",
-    text: "Monitored application health using tools like Grafana to proactively identify and debug frontend security vulnerabilities and runtime errors.",
+    icon: "💾",
+    text: "Improved runtime performance and data consistency by implementing Normalized State Management using Redux Toolkit across complex enterprise modules.",
   },
 ];
 
@@ -180,7 +176,7 @@ export default function Experience() {
                       dangerouslySetInnerHTML={{
                         __html: b.text
                           .replace(/(\d+[\+%][\w\s]*)/g, '<strong style="color:var(--text-primary)">$1</strong>')
-                          .replace(/(React Query|GraphQL|Jest|React Testing Library|Grafana|Chrome DevTools|Lighthouse|WCAG)/g, '<span style="color:var(--accent-purple-light);font-weight:600">$1</span>'),
+                          .replace(/(React Query|GraphQL|Jest|React Testing Library|Grafana|Chrome DevTools|Lighthouse|WCAG|Antigravity|Redux Toolkit)/g, '<span style="color:var(--accent-purple-light);font-weight:600">$1</span>'),
                       }}
                     />
                   </div>
