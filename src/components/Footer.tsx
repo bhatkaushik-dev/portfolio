@@ -63,8 +63,7 @@ export default function Footer() {
               {[
                 { label: "📧 kaushikgb99@gmail.com", href: "mailto:kaushikgb99@gmail.com" },
                 { label: "📞 +91-9110691605", href: "tel:+919110691605" },
-                { label: "💼 LinkedIn Profile", href: "https://linkedin.com/in/kaushik-bhat" },
-                { label: "🌐 annachy.com", href: "https://annachy.com/" },
+                { label: "💼 LinkedIn Profile", href: "https://www.linkedin.com/in/kaushik-bhat-3368b1195/" },
               ].map((item) => (
                 <a
                   key={item.label}

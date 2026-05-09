@@ -233,7 +233,7 @@ export default function Hero() {
         >
           {[
             { value: "3+", label: "Years Exp." },
-            { value: "50+", label: "Components Built" },
+            { value: "50+", label: "Projects Built" },
             { value: "35%", label: "LCP Improvement" },
             { value: "5K+", label: "Daily Users" },
           ].map((stat) => (

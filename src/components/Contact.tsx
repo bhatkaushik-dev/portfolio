@@ -25,7 +25,7 @@ const CONTACT_ITEMS = [
   {
     icon: "💼",
     label: "LinkedIn",
-    value: "linkedin.com/in/kaushik-bhat",
+    value: "linkedin.com/in/kaushik-bhat-3368b1195",
     href: "https://www.linkedin.com/in/kaushik-bhat-3368b1195/",
     color: "purple",
   },
